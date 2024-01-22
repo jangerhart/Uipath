@@ -94,6 +94,17 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "MSSQL Test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SQLDT&Sequence_1",
+        "SQLDTText&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

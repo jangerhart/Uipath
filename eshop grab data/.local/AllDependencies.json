@@ -22371,15 +22371,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gerhart.10\\.nuget\\packages\\": {}
+    "C:\\Users\\Honza\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "eshop grab data",
       "projectName": "eshop grab data",
-      "projectPath": "C:\\Users\\gerhart.10\\Documents\\UiPath\\eshop grab data\\.local",
-      "packagesPath": "C:\\Users\\gerhart.10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gerhart.10\\Documents\\UiPath\\eshop grab data\\.local"
+      "projectPath": "D:\\Devel\\Uipath\\eshop grab data\\.local",
+      "packagesPath": "C:\\Users\\Honza\\.nuget\\packages\\",
+      "outputPath": "D:\\Devel\\Uipath\\eshop grab data\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -22425,7 +22425,7 @@
             "version": "[23.6.2-preview, 23.6.2-preview]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\gerhart.10\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "D:\\Program Files\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
