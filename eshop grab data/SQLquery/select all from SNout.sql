@@ -1,0 +1,5 @@
+SELECT TOP (1000) [id]
+      ,[part]
+      ,[price]
+	  ,[date]
+  FROM [uipathrpa].[dbo].[SNout]
