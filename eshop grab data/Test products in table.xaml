@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Test_Single_product" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,4124.8" sap2010:WorkflowViewState.IdRef="Test_Single_product_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Test_Single_product" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="850.4,2226.4" sap2010:WorkflowViewState.IdRef="Test_Single_product_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -117,47 +117,39 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Test_Single_product" sap:VirtualizedContainerService.HintSize="710.4,4020" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Test products in tables" sap:VirtualizedContainerService.HintSize="643.2,2161.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="currentpart" />
-      <Variable x:TypeArguments="x:String" Name="Text1" />
-      <Variable x:TypeArguments="x:String" Name="SearchResultText" />
-      <Variable x:TypeArguments="x:String" Name="Text2" />
-      <Variable x:TypeArguments="x:String" Name="Text3" />
-      <Variable x:TypeArguments="x:String" Name="strPrice" />
-      <Variable x:TypeArguments="x:String" Name="strPrice5" />
-      <Variable x:TypeArguments="x:String" Name="strPrice1" />
-      <Variable x:TypeArguments="x:String" Name="strPrice2" />
-      <Variable x:TypeArguments="x:String" Name="strPrice3" />
-      <Variable x:TypeArguments="x:String" Name="strPrice4" />
       <Variable x:TypeArguments="x:String" Name="csvname" />
-      <Variable x:TypeArguments="x:String" Name="variable2" />
-      <Variable x:TypeArguments="x:String" Name="variable3" />
       <Variable x:TypeArguments="sd:DataTable" Name="DTTest" />
+      <Variable x:TypeArguments="x:String" Name="strDTTest" />
+      <Variable x:TypeArguments="x:String" Name="currentpart" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="použíj Edge browser a otevři ULR&#xA;" AttachMode="SingleWindow" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: Výsledek hledání" sap:VirtualizedContainerService.HintSize="648,3908" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" ScopeGuid="1ff5807f-8991-4e18-8166-acc145f3e095" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="použíj Edge browser a otevři ULR&#xA;" AttachMode="SingleWindow" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: Výsledek hledání" sap:VirtualizedContainerService.HintSize="580.8,2049.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Always" ScopeGuid="1ff5807f-8991-4e18-8166-acc145f3e095" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="614.4,3647.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="547.2,1788.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="variable4" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="496.8,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Zadej part number" Title="Zadej part number">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="484.8,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Zadej part number" Title="Zadej part number">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[currentpart]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="zadej výraz z proměnné currentpart a stiskni enter" ClickBeforeMode="Single" DisplayName="Type Into 'Zadejte hledany vyraz'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="496.8,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" Text="[currentpart + &quot;[k(Enter)]&quot;]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="zadej výraz z proměnné currentpart a stiskni enter" ClickBeforeMode="Single" DisplayName="Type Into 'Zadejte hledany vyraz'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="484.8,249.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" Text="[currentpart + &quot;[k(Enter)]&quot;]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.jcb-nahradni-dily.cz/" CvElementArea="415, 145, 398, 37" CvTextArea="427, 158, 128, 16" CvTextArgument="Zadejte hledany vyraz" CvType="InputBox" DesignTimeRectangle="415, 145, 406, 37" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Zadejte hledany vyraz'" Guid="5e052df5-5a28-4a41-9892-99187aee0c2c" InformativeScreenshot="b1acb0566cbdb915c7eb45f8c93b3223.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='JCB Náhradní díly' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -173,359 +165,47 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <uix:NGetText sap2010:Annotation.AnnotationText="načti do proměnné SearchResultText výsledek hledání" ContinueOnError="False" DisplayName="Get Search" sap:VirtualizedContainerService.HintSize="496.8,188.8" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" ScrapingMethod="Fulltext" TextString="[SearchResultText]" Timeout="5" Version="V3">
-              <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.jcb-nahradni-dily.cz/hledani?query=331%2F16517" CvType="AnyWordGroup" DesignTimeRectangle="416, 426, 848, 49" DesignTimeScaleFactor="1" FriendlyName="'Pro hledaný'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div' parentid='vs-searchresultsummary' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='vs-searchresultsummary' tag='DIV' class='message error' aaname='' /&gt;" Guid="e21d4346-4d0e-4682-8528-0d759ee209fa" InformativeScreenshot="ae26ca7a77816cdaadfe17e21f481224.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-              </uix:NGetText.Target>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </uix:NGetText>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="496.8,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[SearchResultText]" />
-            <ui:MultipleAssign sap2010:Annotation.AnnotationText="pomocí assign proveď transformaci proměnné" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="552,195.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-              <ui:MultipleAssign.AssignOperations>
-                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[Text1]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[Right(SearchResultText,10)]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[Text2]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[Text1.Trim]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[Text3]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[Text2.Replace(" ", "")]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                </scg:List>
-              </ui:MultipleAssign.AssignOperations>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:MultipleAssign>
-            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="552,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[Text3]" />
-            <Assign sap:VirtualizedContainerService.HintSize="552,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[DTTest]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='price' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='part' ReferenceName='Column1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='5' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='8' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="484.8,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_5" InteractionMode="DebuggerApi" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" Version="V3">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.jcb-nahradni-dily.cz/hledani?query=123&amp;section=searchresultcommoditiesprovider" CvElementArea="745, 358, 142, 45" CvTextArea="787, 372, 58, 13" CvTextArgument="Nacist dalsi" CvType="Button" DesignTimeRectangle="747, 360, 139, 41" DesignTimeScaleFactor="0.8299999833106995" ElementType="Button" FriendlyName="'Načíst další'" FullSelectorArgument="&lt;webctrl parentid='AjaxSearchCommodities' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='AjaxSearchCommodities' tag='BUTTON' type='button' class='btn btn-nexttab' aaname='Načíst další' check:innerText='Načíst další' /&gt;" Guid="1e58c73e-eb90-45b6-ac34-eb2096c82927" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI8AAAAtCAYAAACXtzh2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKpSURBVHhe7ZxBahRRFEXdiXtxH27GieDIBWQVDhw5cOISHGYgSEAUI4EYYqLfvhT39Utx06k0GKrjuXCoW//fqh/qvfzqUT0ZCO0pmgftrRvNc/pqjE9PxzjejAJ01Bfqj67N8CRNpIsAOr2BNqeT2HFgCeoTa3M6KQUBElbZFAJIWGVTCCBhlU0hgIRVNoUAElbZFAJIWGVTCCBhlU0hgIRVNoUAElbZFAJIWGVTCCBhlU0hgIRVNoUAElbZFHpsXH4c4+xoQv7k2RhXnyef8kv48nyM669jfH+R572G1pT/dTxltebPd1NGx99n073m168Rq2wKrRU9+D+X24LpqALe9fA1ryKpmCqkmyhlNedcmjf3aR6dK6e/3evqes0fSuMIq2wKrRU9+Otv2wIsbZ778K+a5zFglU2htaKmufiwfQX05hHaXSy/GlxE6/zttqjzuYv3+R4djVneBdPavXnm62hMmdt2v7VilU2htaKHrYfuh3/bzqN5/5ZQToVTATXXi9rndK8fr6fxnu/MmzXtPF779OXudTRG8zwgbh4VzoXpzaN5a15A36M3j5B0T89rzIX2mOkFnzfPrrXTOjTPA+PmkddRry83j85ddO8QdzWPx3StpOM+zbN07b5Ov9ehYJVNobXSm0fF0394fz25GPIe11hvht48529u7hy6blfzaM731XXybp752r150jr9mkPBKptCa8UP3uculIrpZpL6juRmsfoPZmGl+/S1jP4GSRmhpkhrp9eW5HVoHvivsMqmEEDCKptCAAmrbAoBJKyyKQSQsMqmEEDCKptCAAmrbAoBJKyyKQSQsMqmEEDCKptCAAmrbAoBJKyyKQSQsMryTUJYQvwmIV9DhSXEr6FKmmAHgoT6ojeOtBlGaD/RPGhPjfEXBQAWzHIRjm8AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="459, 65, 715, 1127" DesignTimeScaleFactor="0.8299999833106995" FriendlyName="'&lt;img alt=&quot;Klika'" FullSelectorArgument="&lt;webctrl class='commodities' parentid='AjaxSearchCommodities' tag='DIV' /&gt;" Guid="f321e6dd-b555-4859-bb66-7addfe03e008" InformativeScreenshot="b1e792f6cb67d5452e84e59bd967591c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,271.2" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,192.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:OutputDataTable DataTable="[DTTest]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="387.2,80.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[strDTTest]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,276" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[strDTTest]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <Assign sap:VirtualizedContainerService.HintSize="484.8,82.4" sap2010:WorkflowViewState.IdRef="Assign_12">
               <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[strPrice]</OutArgument>
+                <OutArgument x:TypeArguments="x:String">[csvname]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">produkt není v katalogu</InArgument>
+                <InArgument x:TypeArguments="x:String">[currentpart.Replace("/","-")]</InArgument>
               </Assign.Value>
             </Assign>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Text3]" sap:VirtualizedContainerService.HintSize="552,1256.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-              <Switch.Default>
-                <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[strPrice]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String" xml:space="preserve">v katalogu je více než 4 produkty </InArgument>
-                  </Assign.Value>
-                </Assign>
-              </Switch.Default>
-              <TryCatch x:Key="1produkt" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,388.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-                <TryCatch.Try>
-                  <uix:NGetText ContinueOnError="False" DisplayName="Get Text  price" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" ScrapingMethod="Fulltext" TextString="[strPrice]" Timeout="5" Version="V3">
-                    <uix:NGetText.Target>
-                      <uix:TargetAnchorable BrowserURL="https://www.jcb-nahradni-dily.cz/hledani?query=331%2F31575P" CvType="AnyWordGroup" DesignTimeRectangle="416, 492, 204, 39" DesignTimeScaleFactor="1" FriendlyName="'1 089,00 Kčs DPH900,00 …'" FullSelectorArgument="&lt;webctrl class='pricing' parentid='AjaxSearchCommodities' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='pricing' parentid='AjaxSearchCommodities' tag='DIV' type='' aaname='' /&gt;" Guid="97ce9adb-87f9-463a-ac94-d476ec9d39a6" InformativeScreenshot="8cb9e37b0783a30189d215750a72704d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                    </uix:NGetText.Target>
-                  </uix:NGetText>
-                </TryCatch.Try>
-                <TryCatch.Catches>
-                  <Catch x:TypeArguments="uue:NodeAmbiguousException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ActivityAction x:TypeArguments="uue:NodeAmbiguousException">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="uue:NodeAmbiguousException" Name="exception" />
-                      </ActivityAction.Argument>
-                      <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_3">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[strPrice]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">0</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                    </ActivityAction>
-                  </Catch>
-                </TryCatch.Catches>
-              </TryCatch>
-              <Sequence x:Key="2produkty" sap2010:Annotation.AnnotationText="pokud najde v katalogu dva produkty s identickým začátkem part number, tak celou tabulku zapíše do separátního csv souboru" sap:VirtualizedContainerService.HintSize="512,859.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="GetCode" />
-                    <Variable x:TypeArguments="x:String" Name="GetPrice" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="DT2" />
-                    <Variable x:TypeArguments="x:String" Name="StructuredText" />
-                    <Variable x:TypeArguments="x:String" Name="GetCodeTransform" />
-                    <Variable x:TypeArguments="x:String" Name="GetPriceTransform" />
-                    <Variable x:TypeArguments="x:String" Name="GetPriceTransform2" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[DTTest]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='New column 0' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" Version="V3">
-                    <uix:NExtractData.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="446, 287, 772, 435" DesignTimeScaleFactor="0.8999999761581421" FriendlyName="'&lt;img alt=&quot;Filtr'" FullSelectorArgument="&lt;webctrl class='commodities' parentid='AjaxSearchCommodities' tag='DIV' /&gt;" Guid="e87a3db1-4cd0-4808-9c03-f671cdad0bfb" InformativeScreenshot="79c06a30159c3b5fe540e476dbaa3a7a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NExtractData.Target>
-                  </uix:NExtractData>
-                </Sequence>
-                <Assign sap:VirtualizedContainerService.HintSize="449.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_4">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[csvname]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[currentpart.Replace("/","-")]</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <ui:WriteCsvFile AddHeaders="True" DataTable="[DTTest]" Delimitator="Comma" DisplayName="Write CSV" FilePath="[&quot;D:\Devel\Uipath\eshop grab data\csvoutputs\&quot;+csvname+&quot;.csv&quot;]" sap:VirtualizedContainerService.HintSize="449.6,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" ShouldQuote="True" />
-                <Assign sap:VirtualizedContainerService.HintSize="449.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[strPrice]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">v katalogu jsou 2 produkty</InArgument>
-                  </Assign.Value>
-                </Assign>
-              </Sequence>
-              <Assign x:Key="ádná shoda" sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_6">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[strPrice]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">produkt není v katalogu</InArgument>
-                </Assign.Value>
-              </Assign>
-              <Sequence x:Key="3produkty" sap2010:Annotation.AnnotationText="pokud najde v katalogu dva produkty s identickým začátkem part number, tak celou tabulku zapíše do separátního csv souboru" sap:VirtualizedContainerService.HintSize="512,1006.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                <Sequence.Variables>
-                  <Variable x:TypeArguments="x:String" Name="variable1" />
-                </Sequence.Variables>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="GetCode" />
-                    <Variable x:TypeArguments="x:String" Name="GetPrice" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="DT2" />
-                    <Variable x:TypeArguments="x:String" Name="StructuredText" />
-                    <Variable x:TypeArguments="x:String" Name="GetCodeTransform" />
-                    <Variable x:TypeArguments="x:String" Name="GetPriceTransform" />
-                    <Variable x:TypeArguments="x:String" Name="GetPriceTransform2" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[DTTest]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='New column 0' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" Version="V3">
-                    <uix:NExtractData.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="446, 287, 772, 435" DesignTimeScaleFactor="0.8999999761581421" FriendlyName="'&lt;img alt=&quot;Filtr'" FullSelectorArgument="&lt;webctrl class='commodities' parentid='AjaxSearchCommodities' tag='DIV' /&gt;" Guid="e87a3db1-4cd0-4808-9c03-f671cdad0bfb" InformativeScreenshot="79c06a30159c3b5fe540e476dbaa3a7a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NExtractData.Target>
-                  </uix:NExtractData>
-                </Sequence>
-                <Assign sap:VirtualizedContainerService.HintSize="449.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_7">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[csvname]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[currentpart.Replace("/","-")]</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <ui:WriteCsvFile AddHeaders="True" DataTable="[DTTest]" Delimitator="Comma" DisplayName="Write CSV" FilePath="[&quot;D:\Devel\Uipath\eshop grab data\csvoutputs\&quot;+csvname+&quot;.csv&quot;]" sap:VirtualizedContainerService.HintSize="449.6,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True" />
-                <ui:CommentOut Body="{x:Null}" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,94.4" sap2010:WorkflowViewState.IdRef="CommentOut_2" />
-                <Assign sap:VirtualizedContainerService.HintSize="449.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_8">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[strPrice]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">v katalogu jsou 3 produkty</InArgument>
-                  </Assign.Value>
-                </Assign>
-              </Sequence>
-              <Sequence x:Key="4produkty" sap:VirtualizedContainerService.HintSize="512,828" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="GetCode" />
-                    <Variable x:TypeArguments="x:String" Name="GetPrice" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="DT2" />
-                    <Variable x:TypeArguments="x:String" Name="StructuredText" />
-                    <Variable x:TypeArguments="x:String" Name="GetCodeTransform" />
-                    <Variable x:TypeArguments="x:String" Name="GetPriceTransform" />
-                    <Variable x:TypeArguments="x:String" Name="GetPriceTransform2" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[DTTest]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='New column 0' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" Version="V3">
-                    <uix:NExtractData.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="446, 287, 772, 435" DesignTimeScaleFactor="0.8999999761581421" FriendlyName="'&lt;img alt=&quot;Filtr'" FullSelectorArgument="&lt;webctrl class='commodities' parentid='AjaxSearchCommodities' tag='DIV' /&gt;" Guid="e87a3db1-4cd0-4808-9c03-f671cdad0bfb" InformativeScreenshot="79c06a30159c3b5fe540e476dbaa3a7a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NExtractData.Target>
-                  </uix:NExtractData>
-                </Sequence>
-                <Assign sap:VirtualizedContainerService.HintSize="449.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_9">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[csvname]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[currentpart.Replace("/","-")]</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <ui:WriteCsvFile AddHeaders="True" DataTable="[DTTest]" Delimitator="Comma" DisplayName="Write CSV" FilePath="[&quot;D:\Devel\Uipath\eshop grab data\csvoutputs\&quot;+csvname+&quot;.csv&quot;]" sap:VirtualizedContainerService.HintSize="449.6,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_3" ShouldQuote="True" />
-                <Assign sap:VirtualizedContainerService.HintSize="449.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_10">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[strPrice]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">v katalogu jsou 4 produkty</InArgument>
-                  </Assign.Value>
-                </Assign>
-              </Sequence>
-              <Sequence x:Key="9produktů" sap:VirtualizedContainerService.HintSize="512,952" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,519.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="GetCode" />
-                    <Variable x:TypeArguments="x:String" Name="GetPrice" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="DT2" />
-                    <Variable x:TypeArguments="x:String" Name="StructuredText" />
-                    <Variable x:TypeArguments="x:String" Name="GetCodeTransform" />
-                    <Variable x:TypeArguments="x:String" Name="GetPriceTransform" />
-                    <Variable x:TypeArguments="x:String" Name="GetPriceTransform2" />
-                    <Variable x:TypeArguments="x:String" Name="strDTTest" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[DTTest]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Price' ReferenceName='Column0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Part' ReferenceName='Column1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='5' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='article' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_4" InteractionMode="DebuggerApi" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1ff5807f-8991-4e18-8166-acc145f3e095" Version="V3">
-                    <uix:NExtractData.NextLink>
-                      <uix:TargetAnchorable BrowserURL="https://www.jcb-nahradni-dily.cz/hledani?query=826" CvElementArea="745, 358, 142, 45" CvTextArea="787, 372, 58, 13" CvTextArgument="Nacist dalsi" CvType="Button" DesignTimeRectangle="747, 360, 139, 41" DesignTimeScaleFactor="0.8299999833106995" ElementType="Button" FriendlyName="'Načíst další'" FullSelectorArgument="&lt;webctrl parentid='AjaxSearchCommodities' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='AjaxSearchCommodities' tag='BUTTON' type='button' class='btn btn-nexttab' aaname='Načíst další' check:innerText='Načíst další' /&gt;" Guid="3980413c-7246-4a63-ba28-1394ca5b4aee" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI8AAAAtCAYAAACXtzh2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKpSURBVHhe7ZxBahRRFEXdiXtxH27GieDIBWQVDhw5cOISHGYgSEAUI4EYYqLfvhT39Utx06k0GKrjuXCoW//fqh/qvfzqUT0ZCO0pmgftrRvNc/pqjE9PxzjejAJ01Bfqj67N8CRNpIsAOr2BNqeT2HFgCeoTa3M6KQUBElbZFAJIWGVTCCBhlU0hgIRVNoUAElbZFAJIWGVTCCBhlU0hgIRVNoUAElbZFAJIWGVTCCBhlU0hgIRVNoUAElbZFHpsXH4c4+xoQv7k2RhXnyef8kv48nyM669jfH+R572G1pT/dTxltebPd1NGx99n073m168Rq2wKrRU9+D+X24LpqALe9fA1ryKpmCqkmyhlNedcmjf3aR6dK6e/3evqes0fSuMIq2wKrRU9+Otv2wIsbZ778K+a5zFglU2htaKmufiwfQX05hHaXSy/GlxE6/zttqjzuYv3+R4djVneBdPavXnm62hMmdt2v7VilU2htaKHrYfuh3/bzqN5/5ZQToVTATXXi9rndK8fr6fxnu/MmzXtPF779OXudTRG8zwgbh4VzoXpzaN5a15A36M3j5B0T89rzIX2mOkFnzfPrrXTOjTPA+PmkddRry83j85ddO8QdzWPx3StpOM+zbN07b5Ov9ehYJVNobXSm0fF0394fz25GPIe11hvht48529u7hy6blfzaM731XXybp752r150jr9mkPBKptCa8UP3uculIrpZpL6juRmsfoPZmGl+/S1jP4GSRmhpkhrp9eW5HVoHvivsMqmEEDCKptCAAmrbAoBJKyyKQSQsMqmEEDCKptCAAmrbAoBJKyyKQSQsMqmEEDCKptCAAmrbAoBJKyyKQSQsMryTUJYQvwmIV9DhSXEr6FKmmAHgoT6ojeOtBlGaD/RPGhPjfEXBQAWzHIRjm8AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
-                    </uix:NExtractData.NextLink>
-                    <uix:NExtractData.Target>
-                      <uix:TargetAnchorable DesignTimeRectangle="459, 189, 715, 1127" DesignTimeScaleFactor="0.8299999833106995" FriendlyName="'&lt;img alt=&quot;Matice'" FullSelectorArgument="&lt;webctrl class='commodities' parentid='AjaxSearchCommodities' tag='DIV' /&gt;" Guid="a9ea67ab-1003-40bc-b81a-50cbb5bd4c55" InformativeScreenshot="54065f30b4c4b0f4eedcf3daf0f78663.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Výsledek hledání' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NExtractData.Target>
-                  </uix:NExtractData>
-                  <ui:OutputDataTable DataTable="[DTTest]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="387.2,80.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[strDTTest]" />
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[strDTTest]" />
-                </Sequence>
-                <Assign sap:VirtualizedContainerService.HintSize="449.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_11">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[csvname]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[currentpart.Replace("/","-")]</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <ui:WriteCsvFile AddHeaders="True" DataTable="[DTTest]" Delimitator="Comma" DisplayName="Write CSV" FilePath="[&quot;D:\Devel\Uipath\eshop grab data\csvoutputs\&quot;+csvname+&quot;.csv&quot;]" sap:VirtualizedContainerService.HintSize="449.6,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_4" ShouldQuote="True" />
-              </Sequence>
-            </Switch>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="552,194.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
-              <ui:MultipleAssign.AssignOperations>
-                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[strPrice1]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[strPrice.Replace("Kč bez DPH", "")]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[strPrice2]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[strPrice1.Replace("Kčs DPH", ";")]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[strPrice3]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[strPrice2.Trim]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[strPrice4]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[strPrice3.Replace(" ", "")]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                </scg:List>
-              </ui:MultipleAssign.AssignOperations>
-            </ui:MultipleAssign>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="552,276" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[currentpart]" />
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="552,276" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,197.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[strPrice5]" />
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
+            <ui:WriteCsvFile AddHeaders="True" DataTable="[DTTest]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="[&quot;D:\Devel\Uipath\eshop grab data\csvoutputs\&quot;+csvname+&quot;.csv&quot;]" sap:VirtualizedContainerService.HintSize="484.8,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_5" ShouldQuote="True" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
