@@ -279,6 +279,9 @@
       "Path": "Test products in table.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "variable4&Sequence_15",
+        "variable4&Sequence_10",
+        "variable4&Sequence_9",
         "currentpart&Sequence_1",
         "DTTest&Sequence_1",
         "strDTTest&Sequence_1",
