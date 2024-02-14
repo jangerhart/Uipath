@@ -77,7 +77,7 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Online Cogito.xaml",
+      "Path": "Online Cogito_old.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "TextOfDT&Sequence_2",
@@ -287,6 +287,20 @@
         "strDTTest&Sequence_1",
         "csvname&Sequence_1",
         "variable4&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "onlinecogito.PL_test1 notfound product.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "csvname&Sequence_1",
+        "inputpart&Sequence_1",
+        "noPartFound&Sequence_1",
+        "ConnectionString&Sequence_1",
+        "DTCogito&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
