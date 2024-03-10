@@ -296,6 +296,9 @@
       "Path": "onlinecogito.PL_test1 notfound product.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "currentpart&Sequence_1",
+        "CurrentRow&Sequence_1",
+        "SQLDT&Sequence_1",
         "csvname&Sequence_1",
         "inputpart&Sequence_1",
         "noPartFound&Sequence_1",
