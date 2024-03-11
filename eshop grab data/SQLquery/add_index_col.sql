@@ -1,7 +1,4 @@
--- druhý select
--- tento dotaz transormuje tabulku StwPh_27538117.dbo.SKz_transformed tak, že u všech øádkù, kde je ve sloupci IDS více skupin, tyto skupiny rozdìlí (oddìlovaè je mezer). Hodnotu NakupC vloží do 
--- novì vytvoøeného øádku a je stejná jako u pùvodního. Tento select navazuje na transform_skz_remove_unsupported_xml_characters.sql
-
+-- tøetí select
 -- Vytvoøení doèasné tabulky pro mezivýsledek
 IF OBJECT_ID('tempdb..#SKz_transformed_temp') IS NOT NULL
     DROP TABLE #SKz_transformed_temp;
@@ -19,6 +16,10 @@ FROM StwPh_27538117.dbo.SKz_transformed;
 -- Smazání dat z pùvodní tabulky
 DELETE FROM StwPh_27538117.dbo.SKz_transformed;
 
+-- Pøidání sloupce id_internal do cílové tabulky
+ALTER TABLE StwPh_27538117.dbo.SKz_transformed
+ADD id_internal INT IDENTITY(1,1);
+
 -- Rozdìlení hodnot ve sloupci IDS a vložení na samostatné øádky
 ;WITH SplitValues AS (
     SELECT
@@ -28,7 +29,7 @@ DELETE FROM StwPh_27538117.dbo.SKz_transformed;
     FROM
         #SKz_transformed_temp
 )
-INSERT INTO StwPh_27538117.dbo.SKz_transformed (IDS, NakupC)
+INSERT INTO StwPh_27538117.dbo.SKz_transformed (IDS, NakupC) -- Pøidání sloupce id_internal
 SELECT
     Split.a.value('.', 'VARCHAR(90)') AS IDS,
     NakupC
