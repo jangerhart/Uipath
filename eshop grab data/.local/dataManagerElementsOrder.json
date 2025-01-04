@@ -308,6 +308,18 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "onlinecogito.PL_test1 existing product.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "DTCogito&Sequence_1",
+        "ConnectionString&Sequence_1",
+        "csvname&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
